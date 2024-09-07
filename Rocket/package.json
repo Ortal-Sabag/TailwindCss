@@ -1,0 +1,16 @@
+{
+  "name": "rocket",
+  "version": "1.0.0",
+  "description": "Guide: https://www.youtube.com/watch?v=VCpfd1NgBD8&t=1s\r Resource : shttps://github.com/gitdagray/tailwind-css-course/tree/main/lesson02",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
+    "prettier": "npx prettier --write **/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  }
+}

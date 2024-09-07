@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radial-blue {
+    background: radial-gradient(lightyellow, skyblue)
+}
+
+
+@layer utilities{
+    .section-min-height {
+        min-height: calc(100vh-68px); /*68px hight of the header, text-3xl -line-hight=36px, p-4 = 16px on top + 16 px on botton*/
+    }
+
+    .toggle-btn { /*applay  tailwind classes */
+         /*&>div insdtead to button>div, mean what ever the toggle-btn elemet is*/
+         /*&>div::before first line of hamburger*/
+         /*[&>div]:bg-transparent middle one disappear, transparent.*/
+         /* first and last coming back to 0, translate-y-0, it was translate-y-3 and rotate45 and -roate 45 => make them cross */
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 
+        [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
+}
